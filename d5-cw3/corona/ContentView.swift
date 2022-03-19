@@ -25,37 +25,41 @@ struct ContentView: View {
                     .font(.system(size: 30, weight: .bold, design: .default))
                     .padding()
                 // name of new cases
+                ForEach(patients ,id:\.id){i in
                 VStack{
         // الحالة الأولى
                 // الاسم
-               Text("")
+                Text(patients[0].fullName)
 // المنطقة
-                Text("")
+                Text(patients[0].area)
                     // عدد الجرعات
-               Text("")
+                Text("\(patients[0].numberOfDoses)")
 
                 Divider()
                 }
-                VStack{
-        // الحالة الثانية
-                // الاسم
-               Text("")
-                // المنطقة
-               Text("")
-    // عدد الجرعات
-               Text("")
-
-                Divider()
                 }
-                VStack{
-              // الحالة الثالثة
-                      // الاسم
-                     Text("")
-                      // المنطقة
-                     Text("")
-          // عدد الجرعات
-                     Text("")
-                }
+//                VStack{
+//        // الحالة الثانية
+//                // الاسم
+//               Text(patients[1].fullName)
+//                // المنطقة
+//               Text(patients[1].area)
+//
+//               Text("\(patients[1].numberOfDoses)")
+//    // عدد الجرعات
+//
+//
+//                Divider()
+//                }
+//                VStack{
+//              // الحالة الثالثة
+//                      // الاسم
+//                    Text(patients[2].fullName)
+//                      // المنطقة
+//                    Text(patients[2].area)
+//          // عدد الجرعات
+//                    Text("\(patients[2].numberOfDoses)")
+//                }
                 Spacer()
                 HStack{
                     Text("آخر تحديث ١٥-٣-٢٠٢٢")
